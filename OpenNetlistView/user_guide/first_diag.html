@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viewing the first diagram &mdash; OpenNetlistView 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Command Line Parameters" href="cli.html" />
+    <link rel="prev" title="Building it yourself" href="building_app.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OpenNetlistView
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prebuilt_app.html">Prebuilt / AppImage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_app.html">Building it yourself</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Viewing the first diagram</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#viewing-a-example-diagram">Viewing a example diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewing-a-custom-diagram">Viewing a custom diagram</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-yosys">Installing Yosys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-json-file">Creating the JSON file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#from-a-verilog-file">From a verilog file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#from-a-vhdl-file">From a VHDL file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#displaying-the-first-diagram">Displaying the first Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using the OpenNetlistView application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">GUI</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="symbols.html">Symbolfile format</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenNetlistView</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Viewing the first diagram</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/first_diag.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="viewing-the-first-diagram">
+<span id="chp-fist-diag"></span><h1>Viewing the first diagram<a class="headerlink" href="#viewing-the-first-diagram" title="Permalink to this heading"></a></h1>
+<p>To view the first diagram you have two option:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#sec-first-diag-example"><span class="std std-ref">Viewing a example diagram</span></a></p></li>
+<li><p><a class="reference internal" href="#sec-first-diag-custom"><span class="std std-ref">Viewing a custom diagram</span></a></p></li>
+</ul>
+<section id="viewing-a-example-diagram">
+<span id="sec-first-diag-example"></span><h2>Viewing a example diagram<a class="headerlink" href="#viewing-a-example-diagram" title="Permalink to this heading"></a></h2>
+<p>The OpenNetlistView application provides the possibility to load a
+example design that is integrated into the program. To do this you need
+to select one from the <em>Load Example</em> menu which is located
+inside the <em>File</em> menu. The entries can be seen in <a class="reference internal" href="#fig-load-example"><span class="std std-numref">Fig. 1</span></a></p>
+<figure class="align-center" id="fig-load-example">
+<img alt="_images/FileMenuLoad.png" src="_images/FileMenuLoad.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Load Example Menu</span><a class="headerlink" href="#fig-load-example" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>After selecting one of the entries the design is loaded.</p>
+<p>Further information about the program can be found in the <a class="reference internal" href="#sec-fist-diag-further"><span class="std std-ref">Further Reading</span></a> section</p>
+</section>
+<section id="viewing-a-custom-diagram">
+<span id="sec-first-diag-custom"></span><h2>Viewing a custom diagram<a class="headerlink" href="#viewing-a-custom-diagram" title="Permalink to this heading"></a></h2>
+<p>In order to create a custom diagram the program yosys is required.
+If it is not installed follow the instructions in the next section, otherwise
+the section can be skipped.</p>
+<section id="installing-yosys">
+<span id="sec-fist-diag-custom-installing-yosys"></span><h3>Installing Yosys<a class="headerlink" href="#installing-yosys" title="Permalink to this heading"></a></h3>
+<p>It is recommended to use the oss-cad-suite for installing yosys.</p>
+<p>This requires the following steps:</p>
+<ol class="arabic simple">
+<li><p>Download the oss-cad-suite, for your system, from the release page on github.:
+<a class="reference external" href="https://github.com/YosysHQ/oss-cad-suite-build/releases">oss-cad-suite</a></p></li>
+<li><p>Extract the archive to a directory of your choice.</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory to your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable.</p></li>
+<li><p>Run the following command to check if yosys is installed correctly:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yosys<span class="w"> </span>-V
+</pre></div>
+</div>
+</section>
+<section id="creating-the-json-file">
+<span id="sec-fist-diag-custom-creating-json"></span><h3>Creating the JSON file<a class="headerlink" href="#creating-the-json-file" title="Permalink to this heading"></a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The following commands all have the <code class="docutils literal notranslate"><span class="pre">hierarchy</span> <span class="pre">-auto-top</span></code> command in them.
+This is required in any command used to create a JSON file for OpenNetlistView.
+Otherwise the program will have problems when determining the top module.</p>
+</div>
+<section id="from-a-verilog-file">
+<span id="sec-fist-diag-custom-creating-json-verilog"></span><h4>From a verilog file<a class="headerlink" href="#from-a-verilog-file" title="Permalink to this heading"></a></h4>
+<p>To create a JSON file from a verilog file you need to run the following command:</p>
+<p>For a register transfer level (RTL) file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yosys<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;read_verilog &lt;verilog_file&gt;; hierarchy -auto-top; prep; write_json &lt;json_file&gt;&quot;</span>
+</pre></div>
+</div>
+<p>For a gate level file of the ECP5 FPGA:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yosys<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;read_verilog &lt;verilog_file&gt;; hierarchy -auto-top; synth_ecp5; write_json &lt;json_file&gt;&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="from-a-vhdl-file">
+<span id="sec-fist-diag-custom-creating-json-vhdl"></span><h4>From a VHDL file<a class="headerlink" href="#from-a-vhdl-file" title="Permalink to this heading"></a></h4>
+<p>To create a JSON file from a VHDL file you need to run the following command:</p>
+<p>For a register transfer level (RTL) file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yosys<span class="w"> </span>-m<span class="w"> </span>ghdl<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;ghdl &lt;files&gt; -e &lt;top-module&gt;; hierarchy -auto-top; prep; write_json &lt;json_file&gt;&quot;</span>
+</pre></div>
+</div>
+<p>For a gate level file of the ECP5 FPGA:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yosys<span class="w"> </span>-m<span class="w"> </span>ghdl<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;ghdl &lt;files&gt; -e &lt;top-module&gt;; hierarchy -auto-top; synth_ecp5; write_json &lt;json_file&gt;&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="displaying-the-first-diagram">
+<span id="sec-fist-diag-custom-displaying"></span><h3>Displaying the first Diagram<a class="headerlink" href="#displaying-the-first-diagram" title="Permalink to this heading"></a></h3>
+<p>There are two ways to open the Diagram</p>
+<ol class="arabic simple">
+<li><p>Open the program and load the JSON file via the <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">file</span></code> dialog.
+This works for both the native and web assembly version</p></li>
+<li><p>Start the program with the JSON file as an argument via the command line.
+This only works on a native version of the application.
+Further information on this can be found in the chapter <a class="reference internal" href="cli.html#chp-cli"><span class="std std-ref">Command Line Parameters</span></a></p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When the module is being displayed that is bigger then a certain
+threshold, a dialog will appear. This is because of the routing library. Which can take
+a long time to calculate the position of paths for big modules.</p>
+<p>The dialog looks like this:</p>
+<figure class="align-center" id="fig-big-module-dialog">
+<img alt="_images/BigModuleDialog.png" src="_images/BigModuleDialog.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Big Module Dialog</span><a class="headerlink" href="#fig-big-module-dialog" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="further-reading">
+<span id="sec-fist-diag-further"></span><h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>When you want to learn more about the symbol file format or create custom symbols
+you can look at the chapter <a class="reference internal" href="symbols.html#chp-symbols"><span class="std std-ref">Symbolfile format</span></a></p></li>
+<li><p>To learn about the functions of the Graphical User Interface (GUI) look at the
+chapter <a class="reference internal" href="gui.html#chp-gui"><span class="std std-ref">GUI</span></a></p></li>
+<li><p>To learn about the command line parameters look at the chapter <a class="reference internal" href="cli.html#chp-cli"><span class="std std-ref">Command Line Parameters</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="building_app.html" class="btn btn-neutral float-left" title="Building it yourself" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cli.html" class="btn btn-neutral float-right" title="Command Line Parameters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Lukas Bauer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
